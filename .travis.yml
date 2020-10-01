@@ -19,6 +19,7 @@ before_install:
   fi
 
 # Remove the quickcontrols2 and retranslate() because it is not supported in Qt 5.9
+#
 - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
     sed -i "/QQmlEngine::contextForObject/d" src/appproxy.cpp;
   fi
